@@ -1,0 +1,163 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url("autumn-background-with-space-for-text-and-leaves-around-free-image.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #333;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Loader Styles */
+.my-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.rubiks-cube {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    animation: spin 150s infinite linear;
+}
+
+.cube {
+    width: 50px;
+    height: 50px;
+}
+
+.face {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 150px;
+    height: 150px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    50%{
+        transform: rotateX(0deg) rotateY(180deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    padding: 0;
+    background-color: #272222;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Social Link Styles */
+.social-link {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.social-link:hover {
+    text-decoration: rgb(168, 74, 7) overline;
+}
+
+/* Intro Section Styles */
+.intro h1 {
+    color: #5ba1eb;
+    font-size: 100px;
+}
+
+.intro h2 {
+    font-size: 2rem;
+    margin: 10px 0;
+    color: #d7c8c8;
+}
+
+/* Profile Image Styles */
+.profile-img {
+    margin: 20px 0;
+    border-radius: 10px;
+    border: 3px solid #69717a;
+    transition: opacity 15s ease-in-out;
+    opacity: 0;
+}
+
+/* Bio Section Styles */
+.bio h3 {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #6da1d8;
+}
+
+.bio p {
+    font-size: 1.2rem;
+    color: #a4e5b7;
+    margin: 40px;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.bio strong {
+    color: #e17e3c;
+}
+
+/* Bubble Animation Styles */
+.bubble {
+    position: absolute;
+    bottom: -150px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: rise 10s linear infinite;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(0.5);
+    }
+    
+    100% {
+        transform: translateY(-1000px) scale(1);
+    }
+}
+
+/* Logo Styles */
+.logo {
+    width: 67px;
+    height: 42px;
+}
